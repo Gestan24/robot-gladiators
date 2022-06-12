@@ -352,7 +352,7 @@ var playerInfo = {
 
             this.attack += 6;
 
-            this.money -= 7:
+            this.money -= 7;
     
         }
 
