@@ -48,17 +48,10 @@ var fight = function(enemy) {
 
     while(playerInfo.health > 0 && enemy.health > 0) {
         
-        if (fightOrSkip()) {
-
-            //if true, leave fight by breaking loop
-
-            break;
-        };
+         (fightOrSkip());
 
 
-    // if player choses to fight, then fight
-
-    if (promptFight === "fight" || promptFight === "FIGHT") {
+    
 
 
     // generate random damage value based on player's attack power
@@ -133,7 +126,6 @@ var fight = function(enemy) {
 
 }
 
-}
 var startGame = function() { 
 
 
@@ -257,27 +249,21 @@ var shop = function() {
 
     switch (shopOptionPrompt) {
 
-        case "refill":
-
-        case "REFILL":
+        case 1:
 
        playerInfo.refillHealth();
         
         break;
 
 
-        case "upgrade":
-
-        case "UPGRADE":
+        case 2:
             
         playerInfo.upgradeAttack();
 
         break;
         
         
-        case "leave":
-
-        case "LEAVE":
+        case 3:
                 
             window.alert('leaving the store.');
             
